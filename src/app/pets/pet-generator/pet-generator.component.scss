@@ -1,0 +1,8 @@
+$root-space-content: 16px;
+
+.petGenerator {
+    &-upload {
+        margin-left: $root-space-content * 4;
+        margin-bottom: $root-space-content;
+    }
+}

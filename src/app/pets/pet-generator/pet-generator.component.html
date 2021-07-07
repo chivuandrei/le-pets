@@ -1,0 +1,49 @@
+<button mat-button color="primary" routerLink="/pets-list">go back to pets list</button>
+<form [formGroup]="petForm" fxLayout="column" fxLayoutAlign="space-around center">
+
+  <h3>
+    LePet Generator
+  </h3>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select Pet Category</mat-label>
+    <mat-select formControlName="petCategory">
+      <mat-option *ngFor="let category of petCategoryService.petCategory" [value]="category.value">
+        {{category.value}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your pet name</mat-label>
+    <input matInput placeholder="Please add you re pet name" formControlName="petName" required>
+  </mat-form-field>
+
+  <!--  this pretty option is not giving us the url to the image -->
+  <!-- <mat-form-field>
+      <ngx-mat-file-input formControlName="petImage" accept="image/*">
+        <!-- <mat-icon ngxMatFileInputIcon>folder</mat-icon> -->
+  <!-- </ngx-mat-file-input> -->
+  <!-- </mat-form-field> -->
+
+  <!-- the api is using only urls -->
+  <!-- <input class="petGenerator-upload" placeholder="Please add you re pet image" type="file" accept="image/*"
+    (change)="onImageChange($event)"> -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your pet url photo</mat-label>
+    <input matInput placeholder="Please add you re pet url image" formControlName="petImageUrl" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select Pet Status</mat-label>
+    <mat-select formControlName="petStatus">
+      <mat-option *ngFor="let status of petCategoryService.petStatus" [value]="status.value">
+        {{status.value}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button [disabled]="!petForm.valid" mat-button color="primary" (click)="generatePet()">Generate PET</button>
+
+</form>

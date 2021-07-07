@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Le-PET {{data?.name}} details</h1>
+<div mat-dialog-content fxLayout="column" fxLayoutAlign="space-around center">
+  <div>Category: {{data?.category?.name}}</div>
+  <div>Name: {{data?.name}}</div>
+  <div>Status: {{data?.status}}</div>
+  <img class="petDetailsDialog-image" [src]="data?.photoUrls">
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

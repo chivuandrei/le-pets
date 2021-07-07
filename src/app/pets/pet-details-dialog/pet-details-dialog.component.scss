@@ -1,0 +1,8 @@
+$picture-dimension: 160px;
+
+.petDetailsDialog {
+    &-image {
+        width: $picture-dimension;
+        height: $picture-dimension;
+    }
+}

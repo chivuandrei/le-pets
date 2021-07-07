@@ -1,0 +1,42 @@
+<a class="button" routerLink="/login">go back to login</a>
+
+<form [formGroup]="signUpForm" fxLayout="column" fxLayoutAlign="space-around center">
+
+  <h3>
+    Sign Up for your LePets account
+  </h3>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your User Name</mat-label>
+    <input matInput placeholder="Please add you re User Name" formControlName="userName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your First Name</mat-label>
+    <input matInput placeholder="Please add you re First Name" formControlName="userFirstName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Last Name</mat-label>
+    <input matInput placeholder="Please add you re Last Name" formControlName="userLastName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Email</mat-label>
+    <input matInput placeholder="Please add you re Email" formControlName="userEmail" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Password</mat-label>
+    <input matInput type="password" placeholder="Please add you re new Password" formControlName="userPassword"
+      required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your Phone</mat-label>
+    <input matInput placeholder="Please add you re new Phone" formControlName="userPhone" required>
+  </mat-form-field>
+
+  <button [disabled]="!signUpForm.valid" mat-button color="primary" (click)="signUp()">Sign UP</button>
+
+</form>

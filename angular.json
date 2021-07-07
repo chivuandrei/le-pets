@@ -27,7 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "le-pets"
+  "defaultProject": "le-pets",
+  "cli": {
+    "analytics": false
+  }
 }

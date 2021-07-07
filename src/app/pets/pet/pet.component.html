@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutGap="16px">
+  <ng-container *ngIf="pet; else noContent">
+    <ng-content> </ng-content>
+    <div class="pet-name">Pet Name: <span class="pet-name-title">{{pet?.name}}</span> </div>
+    <div>Pet Status:
+      <span [ngStyle]="{'color': getStatusColor(pet?.status)}">
+        {{pet?.status}}
+      </span>
+    </div>
+  </ng-container>
+  <ng-template #noContent>
+    Sorry we didn`t found any pet for you re selection please try another option
+  </ng-template>
+</div>
